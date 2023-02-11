@@ -2,4 +2,4 @@
 
 using namespace std;
 
-int main() { cout << "I like testing this github stuff"; }
+int main() { cout << "Sometimes I think the sky is purple."; }
