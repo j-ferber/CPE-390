@@ -1,3 +1,9 @@
+/*
+  Author: Justin Ferber / Co-Author: Brandon Fox
+  I pledge my Honor that I have abided by the Stevens Honor System - Justin
+  Ferber
+*/
+
 #include <bitset>
 #include <cmath>
 #include <iomanip>
