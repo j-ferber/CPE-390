@@ -8,5 +8,4 @@ main:
 	.globl f
 f:
   mov %rcx, %rax
-  not %rdx 
-  and %rdx, %rax
+  xor %rdx, %rax
