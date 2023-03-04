@@ -8,9 +8,9 @@ using namespace std;
 extern uint64_t count(int val);
 extern uint64_t sumsq(const uint64_t a[], uint32_t len);
 extern void add1(uint64_t a[], uint32_t len);
+// extern uint64_t replaceZero(uint64_t val);
 
 /*
-extern uint64_t replaceZero(uint64_t val);
 extern uint64_t replaceOne(uint64_t val);
 extern uint64_t toggles(uint64_t val);
 extern uint64_t replaceD(uint64_t val);
@@ -19,7 +19,7 @@ extern uint64_t replaceD(uint64_t val);
 // points function.
 
 void print(const uint64_t a[], uint32_t len) {
-  for (int i = 0; i < 4; i++) {
+  for (int i = 0; i < len; i++) {
     cout << a[i] << ", ";
   }
   cout << endl;
@@ -41,14 +41,13 @@ int main() {
   add1(b, lenb);
   print(b, lenb);
 
-  /*
   // question 4: --------------------------
-  const uint64_t t1 = 0xF2ECBABE;
-  uint64_t res4 = replaceZero(t1);
-  cout << "Binary:" << bitset<64>(res4) << endl;
-  cout << hex << "Hex: " << res4 << endl;
+  // const uint64_t t1 = 0xF2ECBABE;
+  // uint64_t res4 = replaceZero(t1);
+  // cout << "Binary:" << bitset<64>(res4) << endl;
+  // cout << hex << "Hex: " << res4 << endl;
 
-
+  /*
     // question 5: --------------------------
     const uint64_t t2 = 0xF2ECBABE;
     uint64_t res5 = replaceOne(t2);

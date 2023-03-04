@@ -31,7 +31,7 @@
   _Z4add1Pyj:
     push %r11
     push %r10
-    mov $0, %r11
+    xor %r11, %r11
 
   add1loop:
     mov (%rcx), %r10
@@ -44,3 +44,4 @@
     pop %r11
     pop %r10
     ret    
+    
