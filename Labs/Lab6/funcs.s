@@ -44,4 +44,47 @@
     pop %r11
     pop %r10
     ret    
-    
+
+.globl _Z11replaceZeroy # Question 4
+  _Z11replaceZeroy:
+    xor %rax, %rax
+    mov %rcx, %rax
+    mov $0xFFFFF08F, %rdx
+    and %rdx, %rax
+    mov %rdx, %rcx
+    ret
+
+.globl _Z10replaceOney # Question 5
+  _Z10replaceOney:
+    xor %rax, %rax
+    mov %rcx, %rax
+    mov $0x00000440, %rdx
+    or %rdx, %rax
+    mov %rdx, %rcx
+    ret
+
+.globl _Z7togglesy # Question 6          0xF2ECBABE = 1111 0010 1110 1100 1011 1010 1011 1110  
+  _Z7togglesy:     #                                = 1111 0010 1110 1100 1011 XXX0 1XXX 1110
+    xor %rax, %rax #                                = 1111 0010 1110 1100 1011 0100 1100 1110
+    mov %rcx, %rax
+    mov $0x00000440, %rdx
+    xor %rdx, %rax
+    mov %rdx, %rcx
+    ret
+
+.globl _Z8replaceDy # Question 7 -> NOT WORKING
+  _Z8replaceDy:
+    xor %rax, %rax
+    push %r10
+    mov %rcx, %r10
+    mov %rcx, %rax
+    mov $0x000000000F0, %rdx
+    and %rdx, %rax
+    cmp $0x000000000C0, %rdx
+    je replaceD # 1100 1101
+  replaceD:
+    or $0x000000000D0, %r10
+    mov %r10, %rcx
+    pop %r10
+    ret
+
