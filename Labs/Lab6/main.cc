@@ -63,7 +63,5 @@ int main() {
   cout << "Binary: " << bitset<64>(res) << endl;
   cout << hex << "Hex: " << res << endl;
 
-  // extra points function: ----------------
-
   return 0;
 }

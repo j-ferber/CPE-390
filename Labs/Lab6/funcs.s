@@ -1,4 +1,4 @@
-.globl _Z5counti # Question 1
+.globl _Z5counti # Question 1 (rdx gets to 22 and stops the loop)
   _Z5counti: 
     mov $1, %rdx 
 
@@ -8,7 +8,7 @@
     jl loopcount
     ret
 
-.globl _Z5sumsqPKyj # Question 2
+.globl _Z5sumsqPKyj # Question 2 (rax adds up to 102)
   _Z5sumsqPKyj: 
     xor %rax, %rax
     push %r10
@@ -23,8 +23,8 @@
     add $1, %r11
     cmp %r11, %rdx
     jg sumsqloop
-    pop %r10
     pop %r11
+    pop %r10
     ret
  
 .globl _Z4add1Pyj # Question 3
@@ -69,22 +69,17 @@
     mov %rcx, %rax
     mov $0x00000440, %rdx
     xor %rdx, %rax
-    mov %rdx, %rcx
     ret
 
-.globl _Z8replaceDy # Question 7 -> NOT WORKING
+.globl _Z8replaceDy # Question 7
   _Z8replaceDy:
-    xor %rax, %rax
-    push %r10
-    mov %rcx, %r10
     mov %rcx, %rax
     mov $0x000000000F0, %rdx
     and %rdx, %rax
     cmp $0x000000000C0, %rdx
-    je replaceD # 1100 1101
+    jz replaceD # 1100 1101
   replaceD:
-    or $0x000000000D0, %r10
-    mov %r10, %rcx
-    pop %r10
+    or $0x00000000010, %rcx
+    mov %rcx, %rax
     ret
 

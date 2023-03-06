@@ -1,12 +1,3 @@
-#include <iostream>
-
-using namespace std;
-
-int main() {
-  uint8_t x = 255 + 2;
-  cout << x;
-}
-
 #include <bitset>
 #include <cmath>
 #include <iomanip>
@@ -25,7 +16,13 @@ uint64_t compress(const uint32_t in[], uint32_t len, uint64_t out[]) {
   return i + 1;
 }
 
-uint64_t arithmeticCompress(const uint32_t in[], uint32_t len, uint32_t base);
+uint64_t arithmeticCompress(const uint32_t in[], uint32_t len, uint32_t base) {
+  uint64_t finish = in[0] * base + in[1];
+  for (int i = 2; i < len; i++) {
+    finish = finish * base + in[i];
+  }
+  return finish;
+}
 
 int main() {
   cout << "Question 1-----------------------------------" << endl;
@@ -41,10 +38,10 @@ int main() {
     cout << '\n';
   }
 
-  // cout << "Question 2-----------------------------------" << endl;
-  // uint32_t in[] = {22, 5, 19, 12, 6, 18, 2, 14, 10, 0, 9, 15, 17, 20};
-  // uint64_t ans = arithmeticCompress(in, 14, 23);
-  // cout << ans << '\n' << endl;
+  cout << "Question 2-----------------------------------" << endl;
+  uint32_t in[] = {22, 5, 19, 12, 6, 18, 2, 14, 10, 0, 9, 15, 17, 20};
+  uint64_t ans = arithmeticCompress(in, 14, 23);
+  cout << ans << '\n' << endl;
 
-  // return 0;
+  return 0;
 }
