@@ -9,9 +9,11 @@
 using namespace std;
 /*
         AUTHOR: Justin Ferber
-        CITE: cite any sources you used other than the ones given
+        CITE: Same as Brandon's
         "I pledge my Honor that I have abided by the Stevens Honor System" -
    Justin Ferber
+
+        PARTNER: Brandon Fox
 */
 
 /*
