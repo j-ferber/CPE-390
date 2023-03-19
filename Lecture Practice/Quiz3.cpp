@@ -12,17 +12,19 @@ f:
     leaq  (%rcx, %rdx), %rax
     ret
 ```
+cmp %rcx, %rdx
+jl ____  this will jump to the loop if rdx < rcx
 
 Write a function that takes a 64-bit integer parameter and counts from 1 to that
 parameter. (Write a loop in assembler)
 1. Write a function that takes a 64-bit integer parameter and counts from 1 to
 that parameter. (Write a loop in assembler)
 
-1. Write a function that takes a pointer to an array of 64-bit numbers and
+2. Write a function that takes a pointer to an array of 64-bit numbers and
 64-bit number with the length of the array Write zero to every element of the
 array.
 
-1. Write a function that takes a pointer to an array of 64-bit numbers and
+3. Write a function that takes a pointer to an array of 64-bit numbers and
 64-bit number with the length of the array Double every element of the array.
 
 */

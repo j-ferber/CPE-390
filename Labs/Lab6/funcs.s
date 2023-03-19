@@ -11,8 +11,6 @@
 .globl _Z5sumsqPKyj # Question 2 (rax adds up to 102)
   _Z5sumsqPKyj: 
     xor %rax, %rax
-    push %r10
-    push %r11
     mov $0, %r11
   
   sumsqloop:
@@ -23,14 +21,10 @@
     add $1, %r11
     cmp %r11, %rdx
     jg sumsqloop
-    pop %r11
-    pop %r10
     ret
  
 .globl _Z4add1Pyj # Question 3 (6, 4, 7, 8, 5, 10)
   _Z4add1Pyj:
-    push %r11
-    push %r10
     xor %r11, %r11
 
   add1loop:
@@ -41,8 +35,6 @@
     add $1, %r11
     cmp %r11, %rdx
     jg add1loop
-    pop %r11
-    pop %r10
     ret    
 
 .globl _Z11replaceZeroy # Question 4 (Binary:0000000000000000000000000000000011110010111011001011000010001110 -> Hex: f2ecb08e)
