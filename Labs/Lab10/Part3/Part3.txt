@@ -1,0 +1,4 @@
+1. 135 ms faster
+2. The Intel intrisic method is more optimized for your computer than the C++ methods
+3. Built in finction for a specific given processor
+4. The disadvantage is that it would not be universal

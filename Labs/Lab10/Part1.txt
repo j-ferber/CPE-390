@@ -1,0 +1,6 @@
+CPU Model: 11th Gen Intel(R) Core(TM) i7-11800H
+Clock Speed: 2.3 GHz
+Memory: DDR4
+RAM: 16 GB
+Speed of RAM: 3200 MHz
+Cache: 24 MB Intel(R) Smart Cache
